@@ -1,2 +1,3 @@
-# flutter-crash-course
+# Flutter Crash Course
+
 https://fluttercrashcourse.com/
