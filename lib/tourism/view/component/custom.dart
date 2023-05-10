@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import '../../style.dart';
 
 class ImageNetwork extends StatefulWidget {
   final String imageUrl;
@@ -69,4 +70,15 @@ class ContainerOverlay extends StatelessWidget {
       ),
     );
   }
+}
+
+class CustomAppBar extends AppBar {
+  CustomAppBar({Key? key, String? title})
+      : super(
+      key: key,
+      title: Text('Tourism & Co.'.toUpperCase(), style: Styles.appBarTitle),
+      backgroundColor: Colors.white,
+      iconTheme: const IconThemeData(color: Colors.black),
+      centerTitle: true,
+      elevation: 0.5);
 }

@@ -1,14 +1,10 @@
 import 'dart:async';
-
-import 'package:crash_course/basics/network/location_api.dart';
-import 'package:crash_course/basics/view/component/custom_app_bar.dart';
-import 'package:crash_course/basics/view/component/image_location.dart';
+import 'package:crash_course/tourism/network/location_api.dart';
 import 'package:flutter/material.dart';
-
 import '../style.dart';
 import '../model/location.dart';
 import 'component/item_location_list.dart';
-import 'custom.dart';
+import 'component/custom.dart';
 import 'location_detail.dart';
 
 class LocationList extends StatefulWidget {

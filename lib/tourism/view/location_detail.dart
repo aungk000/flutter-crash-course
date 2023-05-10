@@ -1,14 +1,11 @@
-import 'package:crash_course/basics/model/location.dart';
-import 'package:crash_course/basics/network/location_api.dart';
-import 'package:crash_course/basics/view/component/custom_app_bar.dart';
-import 'package:crash_course/basics/view/component/image_location.dart';
-import 'package:crash_course/basics/view/component/item_location_list.dart';
+import 'package:crash_course/tourism/model/location.dart';
+import 'package:crash_course/tourism/network/location_api.dart';
+import 'package:crash_course/tourism/view/component/item_location_list.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../data/repository.dart';
 import '../style.dart';
-import 'custom.dart';
+import 'component/custom.dart';
 
 class LocationDetail extends StatefulWidget {
   const LocationDetail({super.key, required this.locationId});
@@ -52,10 +49,17 @@ class _LocationDetailState extends State<LocationDetail> {
   Widget _renderBody(BuildContext context, Location location) {
     var result = <Widget>[];
     //result.add(ImageNetwork(url: location.url, height: 250.0));
-    result.add(ImageNetwork(imageUrl: location.url, height: 200.0,),);
+    result.add(
+      ImageNetwork(
+        imageUrl: location.url,
+        height: 200.0,
+      ),
+    );
     result.add(_renderHeader(context, location));
     result.addAll(_renderFacts(context, location));
-    result.add(Container(height: 75.0,));
+    result.add(Container(
+      height: 75.0,
+    ));
 
     return SingleChildScrollView(
       child: Column(
@@ -74,17 +78,16 @@ class _LocationDetailState extends State<LocationDetail> {
         decoration: BoxDecoration(color: Colors.white.withOpacity(0.5)),
         padding: Styles.paddingLarge,
         child: TextButton(
-          onPressed: _handleBook,
-          style: Styles.flatButtonStyle,
-          child: Text('Book'.toUpperCase())
-        ),
+            onPressed: _handleBook,
+            style: Styles.flatButtonStyle,
+            child: Text('Book'.toUpperCase())),
       ),
     );
   }
 
   Future<void> _handleBook() async {
     final url = Uri.parse('mailto:hello@tourism.co?subject=inquiry');
-    if(await canLaunchUrl(url)) {
+    if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
       print(url);

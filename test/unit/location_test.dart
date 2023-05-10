@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:math';
 
-import 'package:crash_course/basics/data/repository.dart';
-import 'package:crash_course/basics/model/location.dart';
-import 'package:crash_course/basics/network/location_api.dart';
+import 'package:crash_course/tourism/data/repository.dart';
+import 'package:crash_course/tourism/model/location.dart';
+import 'package:crash_course/tourism/network/location_api.dart';
 import 'package:test/test.dart';
 
 void main() {

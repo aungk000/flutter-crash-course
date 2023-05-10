@@ -11,7 +11,7 @@ class Styles {
   static final Color _textColorDefault = _hexToColor('666666');
   static final Color _textColorAccent = Colors.red;
   static final Color _textColorFaint = _hexToColor('999999');
-  static const String _fontDefault = 'Montserrat';
+  static final String _fontDefault = 'Montserrat';
 
   static const paddingLarge = EdgeInsets.all(_paddingLarge);
   static const paddingDefault = EdgeInsets.all(_paddingDefault);
